@@ -14,8 +14,7 @@ using opencv to process the images
 - marking more than one answer is counted as marking none
 
 - grade the student answers with given answers
-- save the studentID, testID, grade to a db (server?)
 - output the studentID, testID, answers to a txt file
-- plot the answers back to the answer sheet
-- plot the grade on the answer sheet
+- plot the graded image, with: the studentID, the testID, the student's answers, the correct answers, the grade
+- save the studentID, testID, grade to a db (server?)
 
