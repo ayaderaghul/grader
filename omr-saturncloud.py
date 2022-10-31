@@ -359,7 +359,7 @@ def grade(inputfile):
     gr = grading(students, answers, swid, shei, color_transf)
 
     plt.axis('off')
-    plt.savefig(f'./output/{inputfile}_{gr}.jpg', bbox_inches='tight', dpi=400, transparent=True, pad_inches=0)
+    # plt.savefig(f'./output/{inputfile}_{gr}.jpg', bbox_inches='tight', dpi=400, transparent=True, pad_inches=0)
     # plt.show() 
     plt.close()
     return [f'{inputfile}_{gr}.jpg', studentID, testID, gr]
