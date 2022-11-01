@@ -367,3 +367,17 @@ def grade(inputfile):
     plt.close()
     return [f'{inputfile}_{gr}.jpg', studentID, testID, gr]
     # return grade
+
+f_name = './input/files.txt'
+def file_gen(f_name):
+    counter = 1
+    with open(f_name) as f:
+        while True:
+            line = f.readline()
+            if not line:
+                break
+            yield [counter, line[:-1]]
+            counter +=1 
+    
+for nlines in file_gen(f_name):
+    print(nlines)
