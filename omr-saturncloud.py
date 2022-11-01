@@ -254,10 +254,13 @@ def grade(inputfile):
 
     plt.figure(frameon=False)
 
-    # TODO: rotate the image with cv.rotate if necessary
-
     im_orig = cv2.imread(f'./input/{inputfile}')
 
+    (h, w) = im_orig.shape[:2]
+    if h < w:
+        (cX, cY) = (w // 2, h // 2)   
+        M = cv2.getRotationMatrix2D((cX, cY), -90, 1.0)
+        im_orig = cv2.warpAffine(im_orig, M, (w, h))
 
     im_normalized = normalize(im_orig)
 
